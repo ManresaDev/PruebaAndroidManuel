@@ -1,20 +1,13 @@
-package com.manresa.pruebaandroidmanuel.view
+package com.manresa.pruebaandroidmanuel.ui.view
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
 import com.manresa.pruebaandroidmanuel.`interface`.LoginResultCallBacks
 import com.manresa.pruebaandroidmanuel.databinding.ActivityLoginBinding
-import com.manresa.pruebaandroidmanuel.viewmodel.LoginViewModel
-import com.manresa.pruebaandroidmanuel.viewmodel.LoginViewModelFactory
+import com.manresa.pruebaandroidmanuel.ui.view.viewmodel.LoginViewModel
+import com.manresa.pruebaandroidmanuel.ui.view.viewmodel.LoginViewModelFactory
 
 class LoginActivity : AppCompatActivity(), LoginResultCallBacks {
     private lateinit var binding : ActivityLoginBinding

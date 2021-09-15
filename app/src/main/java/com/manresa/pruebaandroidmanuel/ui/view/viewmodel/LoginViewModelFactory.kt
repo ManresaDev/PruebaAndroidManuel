@@ -1,4 +1,4 @@
-package com.manresa.pruebaandroidmanuel.viewmodel
+package com.manresa.pruebaandroidmanuel.ui.view.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

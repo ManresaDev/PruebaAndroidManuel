@@ -1,6 +1,5 @@
-package com.manresa.pruebaandroidmanuel.viewmodel
+package com.manresa.pruebaandroidmanuel.ui.view.viewmodel
 
-import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import com.manresa.pruebaandroidmanuel.`interface`.LoginResultCallBacks
 import com.manresa.pruebaandroidmanuel.data.model.User
@@ -24,7 +23,7 @@ class LoginViewModel(private val listener : LoginResultCallBacks) : ViewModel() 
 
     fun login(){
         val hashMD5 = Desencrypt.desencryptMD5(password)
-        
+
     }
 
 
