@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PruebaAndroidManuel</string>
+    <string name="titulo">Cinema Plus</string>
+    <string name="Email">Email</string>
+    <string name="Password">Constraseña</string>
+    <string name="iniciar">Iniciar Sesión</string>
+    <string name="subTitulo">Aplicación de videoStriming</string>
+</resources>

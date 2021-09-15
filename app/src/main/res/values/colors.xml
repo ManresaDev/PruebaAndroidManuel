@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Primary son los colores principalmente de los botones-->
+    <color name="primary">#641142</color>
+    <!--Primarylight es el color de la barra de notificaciones-->
+    <color name="primarylight">#1c1825</color>
+    <color name="primarydark">#85211b</color>
+
+    <color name="secondary">#7a1c4b</color>
+    <color name="secondaryLight">#ac4c77</color>
+    <color name="secondarydark">#4a0023</color>
+
+    <color name="background">#1c1825</color>
+    <color name="fucsia">#b71056</color>
+
+    <color name="barra">#121019</color>
+
+    <color name="texto">#fffdfd</color>
+    <color name="textohint">#7A7A7A</color>
+
+    <color name="granate">#641142</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+</resources>
