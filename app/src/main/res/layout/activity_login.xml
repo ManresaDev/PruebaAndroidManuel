@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".view.LoginActivity">
+    tools:context=".ui.view.LoginActivity">
 
 
     <TextView
@@ -69,6 +69,7 @@
         android:layout_marginStart="20dp"
         android:background="@drawable/rounded_button"
         android:text="@string/iniciar"
+        android:textColor="@color/texto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
