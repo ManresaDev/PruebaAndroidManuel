@@ -117,14 +117,13 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     private fun searchByName(query : String){
         viewmodel.getCartelera(this, token, device).observe(this, Observer {
+            carteleras.clear()
             for (result in it.contents){
-                if(result.title == query){
-
-                    carteleras.clear()
-                    carteleras.addAll(listOf(result))
-                    adapter.notifyDataSetChanged()
+                if(result.title.lowercase().contains(query)){
+                    carteleras.add(result)
                 }
             }
+            adapter.notifyDataSetChanged()
             hideKeyBoard()
         })
     }
@@ -135,7 +134,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     override fun onQueryTextSubmit(query: String?): Boolean {
         if(!query.isNullOrEmpty()){
-            searchByName(query)
+            searchByName(query.lowercase())
         }
         return true
     }
