@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.manresa.pruebaandroidmanuel.PruebaAndroidManuel.Companion.prefs
 import com.manresa.pruebaandroidmanuel.`interface`.LoginResultCallBacks
 import com.manresa.pruebaandroidmanuel.data.model.User
 import com.manresa.pruebaandroidmanuel.domain.GetUserUseCase
@@ -47,7 +48,9 @@ class LoginViewModel(private val listener : LoginResultCallBacks) : ViewModel() 
             }else{
                 user.postValue(result!!)
 
-
+                prefs.saveToken(result.token)
+                prefs.saveDevice(Constante.ANDROID)
+                launchMain(activity)
             }
 
         }

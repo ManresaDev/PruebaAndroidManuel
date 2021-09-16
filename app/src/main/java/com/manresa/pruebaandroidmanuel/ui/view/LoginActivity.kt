@@ -19,8 +19,12 @@ class LoginActivity : AppCompatActivity(), LoginResultCallBacks {
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
-
+        hide()
         loginClicked()
+    }
+
+    private fun hide() {
+        supportActionBar?.hide()
     }
 
     private fun loginClicked() {
@@ -30,9 +34,6 @@ class LoginActivity : AppCompatActivity(), LoginResultCallBacks {
     }
 
     override fun onSuccess(message: String) {
-        val email = binding.email.text.toString()
-        val pass = Desencrypt.desencryptMD5(binding.password.text.toString())
-
         viewmodel.login(this)
     }
 

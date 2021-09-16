@@ -17,15 +17,6 @@ class LoginService {
     suspend fun getUser(email: String, pass : String, device : String) : User{
         return withContext(Dispatchers.IO){
 
-
-           /* val emailFormat = RequestBody.create(MediaType.parse("text/plain"), email)
-
-
-            val passFormat = RequestBody.create(MediaType.parse("text/plain"), pass)
-
-            val deviceFormat = RequestBody.create(MediaType.parse("text/plain"), device) */
-
-
             val response = retrofit.create(LoginApiClient::class.java).getUser(email, pass, device)
             response.body() ?: User(true, "Parametros incorrectos", false, "")
         }

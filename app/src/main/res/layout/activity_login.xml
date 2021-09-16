@@ -69,6 +69,7 @@
         android:layout_marginStart="20dp"
         android:background="@drawable/rounded_button"
         android:text="@string/iniciar"
+        android:textColor="@color/texto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
