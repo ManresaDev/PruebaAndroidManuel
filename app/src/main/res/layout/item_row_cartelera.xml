@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="10dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/caratula"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="10"
+            android:shadowDx="2"
+            android:shadowDy="5"
+            android:textColor="@color/texto"
+            app:layout_constraintBottom_toTopOf="@+id/seccion"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="titulo" />
+
+        <TextView
+            android:id="@+id/seccion"
+            android:layout_margin="5dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="10"
+            android:shadowDx="2"
+            android:shadowDy="5"
+            android:textColor="@color/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Section"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/duracion"
+            android:layout_margin="5dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="10"
+            android:shadowDx="2"
+            android:shadowDy="5"
+            android:textColor="@color/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="duración" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

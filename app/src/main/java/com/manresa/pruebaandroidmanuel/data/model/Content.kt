@@ -4,7 +4,7 @@ data class Content (
         val id: String,
         val title : String,
         val cover : String,
-        val duration: Double,
+        val duration: Int,
         val url : String,
         val section : String
         )

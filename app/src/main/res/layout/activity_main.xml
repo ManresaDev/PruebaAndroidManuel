@@ -9,12 +9,12 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -24,43 +24,63 @@
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="@color/texto">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:weightSum="1"
-               android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
-               <de.hdodenhof.circleimageview.CircleImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
-                   android:layout_weight="0.2"
-                   android:layout_gravity="center_vertical"
-                   android:src="@drawable/cine"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    tools:src="@drawable/cine" />
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:textColor="@color/texto"
-                   android:layout_weight="0.6"
-                   android:layout_gravity="center_vertical"
-                   android:textSize="30sp"
-                   tools:text="Ejemplo"/>
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/texto"
+                    android:textSize="30sp"
+                    tools:text="Ejemplo" />
 
-               <ImageView
-                   android:id="@+id/signOut"
-                   android:layout_width="30dp"
-                   android:layout_height="30dp"
-                   android:src="@drawable/ic_apagar"
-                   android:layout_gravity="center_vertical"
-                   android:layout_weight="0.2"/>
+                <ImageView
+                    android:id="@+id/signOut"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_apagar" />
 
-           </LinearLayout>
-
+            </LinearLayout>
 
 
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
