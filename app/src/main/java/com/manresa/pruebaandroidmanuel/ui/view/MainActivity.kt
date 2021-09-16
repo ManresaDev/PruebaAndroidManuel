@@ -1,5 +1,6 @@
 package com.manresa.pruebaandroidmanuel.ui.view
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.manresa.pruebaandroidmanuel.databinding.ActivityMainBinding
@@ -12,5 +13,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+
     }
+
+
 }

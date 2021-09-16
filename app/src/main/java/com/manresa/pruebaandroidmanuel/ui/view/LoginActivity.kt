@@ -8,6 +8,7 @@ import com.manresa.pruebaandroidmanuel.`interface`.LoginResultCallBacks
 import com.manresa.pruebaandroidmanuel.databinding.ActivityLoginBinding
 import com.manresa.pruebaandroidmanuel.ui.view.viewmodel.LoginViewModel
 import com.manresa.pruebaandroidmanuel.ui.view.viewmodel.LoginViewModelFactory
+import com.manresa.pruebaandroidmanuel.utils.Desencrypt
 
 class LoginActivity : AppCompatActivity(), LoginResultCallBacks {
     private lateinit var binding : ActivityLoginBinding
@@ -29,8 +30,10 @@ class LoginActivity : AppCompatActivity(), LoginResultCallBacks {
     }
 
     override fun onSuccess(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        //Aqui toda la lógica de encriptado
+        val email = binding.email.text.toString()
+        val pass = Desencrypt.desencryptMD5(binding.password.text.toString())
+
+        viewmodel.login(this)
     }
 
     override fun onError(message: String) {
