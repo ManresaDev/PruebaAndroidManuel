@@ -65,4 +65,7 @@ dependencies {
    
     //Circle ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Animaciones
+    implementation 'com.airbnb.android:lottie:4.1.0'
 }

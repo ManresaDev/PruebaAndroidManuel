@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/drawable/bg_color_cardview.xml" value="0.5703125" />
+        <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.5703125" />
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/drawable/ic_play_button.xml" value="0.5703125" />
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/drawable/rounded_button.xml" value="0.5703125" />
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/drawable/splash_background.xml" value="0.5212962962962963" />
@@ -11,7 +12,9 @@
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/layout/activity_pelicula_detail.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/layout/activity_reproductor.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/layout/item_row_cartelera.xml" value="0.12987012987012986" />
+        <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/layout/item_row_cartelera.xml" value="0.1" />
+        <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/manre/AndroidStudioProjects/PruebaAndroidManuel/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.34791666666666665" />
       </map>
     </option>
   </component>

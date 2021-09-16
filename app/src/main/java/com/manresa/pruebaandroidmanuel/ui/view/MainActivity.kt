@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         recyclerViewCartelera = binding.recyclerview
 
         adapter = CarteleraAdapter(this)
-        recyclerViewCartelera.layoutManager = GridLayoutManager(this,3)
+        recyclerViewCartelera.layoutManager = GridLayoutManager(this,2)
         recyclerViewCartelera.adapter = adapter
 
         signOutClicked()

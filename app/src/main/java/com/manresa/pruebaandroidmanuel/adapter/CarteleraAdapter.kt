@@ -1,11 +1,16 @@
 package com.manresa.pruebaandroidmanuel.adapter
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.content.Context
 import android.content.Intent
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.manresa.pruebaandroidmanuel.R
 import com.manresa.pruebaandroidmanuel.data.model.Content
 import com.manresa.pruebaandroidmanuel.data.model.UserLoad
@@ -51,10 +56,34 @@ class CarteleraAdapter(private val context: Context) : RecyclerView.Adapter<Cart
             binding.duracion.text = ConvertSeg.convertSegToMin(cartelera.duration)
             Picasso.with(itemView.context).load(cartelera.cover).fit().into(binding.caratula)
 
+
             itemView.setOnClickListener{
                 launchPeliculasDetails(cartelera.id)
             }
+            var like = false
+            binding.favorite.setOnClickListener {
+               like = likeAnimation(binding.favorite, R.raw.favorite, like)
+            }
         }
+    }
+
+    private fun likeAnimation(imageView: LottieAnimationView, animation : Int, like : Boolean) : Boolean{
+        if(!like){
+            imageView.setAnimation(animation)
+            imageView.playAnimation()
+        }else{
+            imageView.animate()
+                .alpha(0f)
+                .setDuration(200)
+                .setListener(object :AnimatorListenerAdapter(){
+                    override fun onAnimationEnd(animation: Animator?) {
+                        imageView.setImageResource(R.drawable.favorite)
+                        imageView.alpha = 1f
+                    }
+                })
+
+        }
+        return !like
     }
 
     private fun launchPeliculasDetails(id: String) {
