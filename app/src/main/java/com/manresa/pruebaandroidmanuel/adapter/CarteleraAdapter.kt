@@ -1,6 +1,7 @@
 package com.manresa.pruebaandroidmanuel.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import com.manresa.pruebaandroidmanuel.R
 import com.manresa.pruebaandroidmanuel.data.model.Content
 import com.manresa.pruebaandroidmanuel.data.model.UserLoad
 import com.manresa.pruebaandroidmanuel.databinding.ItemRowCarteleraBinding
+import com.manresa.pruebaandroidmanuel.ui.view.PeliculaDetailActivity
 import com.manresa.pruebaandroidmanuel.utils.ConvertSeg
 import com.squareup.picasso.Picasso
 
@@ -48,7 +50,17 @@ class CarteleraAdapter(private val context: Context) : RecyclerView.Adapter<Cart
             binding.seccion.text = cartelera.section
             binding.duracion.text = ConvertSeg.convertSegToMin(cartelera.duration)
             Picasso.with(itemView.context).load(cartelera.cover).fit().into(binding.caratula)
+
+            itemView.setOnClickListener{
+                launchPeliculasDetails(cartelera.id)
+            }
         }
+    }
+
+    private fun launchPeliculasDetails(id: String) {
+        val intent = Intent(context, PeliculaDetailActivity::class.java)
+        intent.putExtra("id", id)
+        context.startActivity(intent)
     }
 
 

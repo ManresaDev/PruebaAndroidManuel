@@ -1,6 +1,7 @@
 package com.manresa.pruebaandroidmanuel.data.network
 
 import com.manresa.pruebaandroidmanuel.core.RetrofitHekper
+import com.manresa.pruebaandroidmanuel.data.model.UserCartelera
 import com.manresa.pruebaandroidmanuel.data.model.UserLoad
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

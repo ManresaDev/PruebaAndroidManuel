@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     private fun getCartelera() {
         binding.loading.visibility = View.VISIBLE
-      viewmodel.getCartelera(this, token, device).observe(this, Observer {
+      viewmodel.getCartelera(token, device).observe(this, Observer {
           binding.titulo.text = it.user.name
           Picasso.with(this).load(it.user.avatar).into(binding.avatar);
         binding.loading.visibility = View.GONE
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     private fun searchByName(query : String){
-        viewmodel.getCartelera(this, token, device).observe(this, Observer {
+        viewmodel.getCartelera(token, device).observe(this, Observer {
             carteleras.clear()
             for (result in it.contents){
                 if(result.title.lowercase().contains(query)){

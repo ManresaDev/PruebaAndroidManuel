@@ -12,9 +12,8 @@ import com.manresa.pruebaandroidmanuel.domain.GetCarteleraUseCase
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel(){
-    val userLoad = MutableLiveData<UserLoad>()
 
-    fun getCartelera(activity : Activity, token : String, device : String) : LiveData<UserLoad>{
+    fun getCartelera(token : String, device : String) : LiveData<UserLoad>{
         var getCarteleraUseCase = GetCarteleraUseCase(token, device)
         val mutableData = MutableLiveData<UserLoad>()
         viewModelScope.launch{

@@ -1,4 +1,4 @@
-package com.manresa.pruebaandroidmanuel
+package com.manresa.pruebaandroidmanuel.data
 
 import com.manresa.pruebaandroidmanuel.data.model.CarteleraProvider
 import com.manresa.pruebaandroidmanuel.data.model.UserLoad
